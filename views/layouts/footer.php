@@ -30,6 +30,9 @@
         <div class='text-center text-white-50 small'>
             &copy; <?= date('Y') ?> <?= APP_NAME ?>. All rights reserved.
         </div>
+        <div class='text-center text-white-50 small mt-2'>
+            <strong>23552011317_Ardelia Luthfiani_TIF RP-23 CNS B_UASWEB1</strong>
+        </div>
     </div>
 </footer>
 <?php endif; ?>
