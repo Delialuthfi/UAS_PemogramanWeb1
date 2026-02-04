@@ -36,10 +36,10 @@ $db_name = 'layanan_kesehatan';
 
 // Production (AnymHost) - Silakan ganti ini nanti di server
 if ($_SERVER['HTTP_HOST'] === 'ardeliaweb.my.id' || $_SERVER['HTTP_HOST'] === 'www.ardeliaweb.my.id') {
-    $db_host = 'localhost'; // Biasanya localhost juga di hosting
-    $db_user = 'u123456_user'; // Ganti dengan user database hosting
-    $db_pass = 'password_db';   // Ganti dengan password database hosting
-    $db_name = 'u123456_db';    // Ganti dengan nama database hosting
+    $db_host = 'localhost'; 
+    $db_user = 'dasvtkap_adel'; // Updated based on your screenshot
+    $db_pass = 'DB_PASSWORD_ANDA';   // ganti dengan password database yg anda buat di cpanel
+    $db_name = 'dasvtkap_adel';    // Updated based on your screenshot
     
     // Update Base URL untuk production
     if (!defined('BASE_URL_FIXED')) {
