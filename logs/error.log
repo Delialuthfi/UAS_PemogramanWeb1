@@ -1,0 +1,9 @@
+[04-Feb-2026 11:16:40 Europe/Berlin] PHP Deprecated:  Creation of dynamic property SimplePDFGenerator::$currentPage is deprecated in C:\xampp\htdocs\layanan_kesehatan\assets\tcpdf\SimplePDFGenerator.php on line 21
+[04-Feb-2026 11:16:40 Europe/Berlin] PHP Deprecated:  Creation of dynamic property SimplePDFGenerator::$y is deprecated in C:\xampp\htdocs\layanan_kesehatan\assets\tcpdf\SimplePDFGenerator.php on line 22
+[04-Feb-2026 11:16:40 Europe/Berlin] PHP Deprecated:  Creation of dynamic property SimplePDFGenerator::$pages is deprecated in C:\xampp\htdocs\layanan_kesehatan\assets\tcpdf\SimplePDFGenerator.php on line 209
+[04-Feb-2026 11:17:02 Europe/Berlin] PHP Deprecated:  Creation of dynamic property SimplePDFGenerator::$currentPage is deprecated in C:\xampp\htdocs\layanan_kesehatan\assets\tcpdf\SimplePDFGenerator.php on line 21
+[04-Feb-2026 11:17:02 Europe/Berlin] PHP Deprecated:  Creation of dynamic property SimplePDFGenerator::$y is deprecated in C:\xampp\htdocs\layanan_kesehatan\assets\tcpdf\SimplePDFGenerator.php on line 22
+[04-Feb-2026 11:17:02 Europe/Berlin] PHP Deprecated:  Creation of dynamic property SimplePDFGenerator::$pages is deprecated in C:\xampp\htdocs\layanan_kesehatan\assets\tcpdf\SimplePDFGenerator.php on line 209
+[04-Feb-2026 11:17:22 Europe/Berlin] PHP Deprecated:  Creation of dynamic property SimplePDFGenerator::$currentPage is deprecated in C:\xampp\htdocs\layanan_kesehatan\assets\tcpdf\SimplePDFGenerator.php on line 21
+[04-Feb-2026 11:17:22 Europe/Berlin] PHP Deprecated:  Creation of dynamic property SimplePDFGenerator::$y is deprecated in C:\xampp\htdocs\layanan_kesehatan\assets\tcpdf\SimplePDFGenerator.php on line 22
+[04-Feb-2026 11:17:22 Europe/Berlin] PHP Deprecated:  Creation of dynamic property SimplePDFGenerator::$pages is deprecated in C:\xampp\htdocs\layanan_kesehatan\assets\tcpdf\SimplePDFGenerator.php on line 209

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="320" viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="320" rx="32" fill="#E0F7FA"/>
+  <ellipse cx="200" cy="260" rx="120" ry="30" fill="#B2EBF2"/>
+  <g>
+    <circle cx="120" cy="160" r="50" fill="#fff" stroke="#26C6DA" stroke-width="4"/>
+    <rect x="100" y="140" width="40" height="40" rx="8" fill="#26C6DA"/>
+    <rect x="112" y="152" width="16" height="16" rx="4" fill="#fff"/>
+    <rect x="118" y="158" width="4" height="4" rx="2" fill="#26C6DA"/>
+  </g>
+  <g>
+    <ellipse cx="280" cy="140" rx="48" ry="48" fill="#fff" stroke="#26C6DA" stroke-width="4"/>
+    <rect x="260" y="120" width="40" height="40" rx="8" fill="#26C6DA"/>
+    <rect x="272" y="132" width="16" height="16" rx="4" fill="#fff"/>
+    <rect x="278" y="138" width="4" height="4" rx="2" fill="#26C6DA"/>
+  </g>
+  <g>
+    <rect x="170" y="80" width="60" height="100" rx="16" fill="#26C6DA"/>
+    <rect x="185" y="100" width="30" height="60" rx="8" fill="#fff"/>
+    <rect x="195" y="120" width="10" height="20" rx="5" fill="#26C6DA"/>
+  </g>
+  <text x="200" y="300" text-anchor="middle" fill="#0097A7" font-size="22" font-family="Arial, Helvetica, sans-serif">Sehat Bersama Kami</text>
+</svg>
