@@ -15,7 +15,7 @@ if (!defined('APP_ROOT')) {
 // =====================
 define('APP_NAME', 'Layanan Kesehatan');
 define('APP_VERSION', '2.0.0');
-define('BASE_URL', '/layanan_kesehatan');
+// BASE_URL is now defined dynamically below based on environment
 
 // =====================
 // ERROR HANDLING
@@ -26,22 +26,64 @@ ini_set('log_errors', 1);
 ini_set('error_log', APP_ROOT . '/logs/error.log');
 
 // =====================
-// DATABASE
+// DATABASE CONFIG
+// =====================
+// Default Localhost
+$db_host = 'localhost';
+$db_user = 'root';
+$db_pass = '';
+$db_name = 'layanan_kesehatan';
+
+// Production (AnymHost) - Silakan ganti ini nanti di server
+if ($_SERVER['HTTP_HOST'] === 'ardeliaweb.my.id' || $_SERVER['HTTP_HOST'] === 'www.ardeliaweb.my.id') {
+    $db_host = 'localhost'; // Biasanya localhost juga di hosting
+    $db_user = 'u123456_user'; // Ganti dengan user database hosting
+    $db_pass = 'password_db';   // Ganti dengan password database hosting
+    $db_name = 'u123456_db';    // Ganti dengan nama database hosting
+    
+    // Update Base URL untuk production
+    if (!defined('BASE_URL_FIXED')) {
+         define('BASE_URL_FIXED', 'https://ardeliaweb.my.id'); 
+    }
+}
+
+// Ensure BASE_URL is set correctly if not fixed
+if (!defined('BASE_URL')) {
+    if (defined('BASE_URL_FIXED')) {
+        define('BASE_URL', BASE_URL_FIXED);
+    } else {
+        // Auto-detect for localhost
+        $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://';
+        $script_dir = dirname($_SERVER['SCRIPT_NAME']);
+        // Strip out any trailing slash
+        $script_dir = rtrim($script_dir, '/');
+        // Handle root directory case
+        if ($script_dir === '\\' || $script_dir === '/') {
+            $script_dir = '';
+        }
+        define('BASE_URL', $protocol . $_SERVER['HTTP_HOST'] . $script_dir);
+    }
+}
+
+// =====================
+// DATABASE CLASS
 // =====================
 class Database {
     private static $instance = null;
     private $conn;
     
-    private $host = 'localhost';
-    private $user = 'root';
-    private $pass = '';
-    private $name = 'layanan_kesehatan';
-    
     private function __construct() {
-        $this->conn = new mysqli($this->host, $this->user, $this->pass, $this->name);
+        global $db_host, $db_user, $db_pass, $db_name;
+        
+        $this->conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
         if ($this->conn->connect_error) {
             error_log('Database connection failed: ' . $this->conn->connect_error);
-            die('Database connection failed');
+            // Hide detailed error in production
+            if (strpos($_SERVER['HTTP_HOST'], 'localhost') === false) {
+                 die('Maaf, sedang ada gangguan koneksi ke database. Silakan coba beberapa saat lagi.');
+            } else {
+                 die('Database connection failed: ' . $this->conn->connect_error);
+            }
         }
         $this->conn->set_charset('utf8mb4');
     }
