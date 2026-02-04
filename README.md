@@ -1,4 +1,4 @@
-# Layanan Kesehatan Digital
+# Layanan Kesehatan Digital (UAS Pemograman Web 1)
 
 ## Struktur Database (MySQL)
 
